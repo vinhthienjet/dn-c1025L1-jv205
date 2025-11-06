@@ -1,0 +1,52 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.7 Chrome/138.0.7204.251 Electron/37.7.1 Safari/537.36" version="28.2.7">
+  <diagram name="Trang-1" id="wV1rmOfJCQH7hHH0Ch2i">
+    <mxGraphModel dx="1426" dy="849" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="d8MfeKyyR7M6kqQlyiEx-6" value="Input C" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="354" y="415" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="d8MfeKyyR7M6kqQlyiEx-7" value="Begin" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="334" y="275" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d8MfeKyyR7M6kqQlyiEx-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="d8MfeKyyR7M6kqQlyiEx-7" target="d8MfeKyyR7M6kqQlyiEx-6" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="404" y="705" as="sourcePoint" />
+            <mxPoint x="454" y="655" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d8MfeKyyR7M6kqQlyiEx-9" value="&#xa;&lt;span style=&quot;color: rgb(56, 58, 66); font-family: SFMono-Regular, Menlo, Monaco, Consolas, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, monospace; font-size: 12.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: pre; background-color: rgb(250, 250, 250); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;F = (9 * C) / 5 + 32&lt;/span&gt;&#xa;&#xa;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="309" y="565" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d8MfeKyyR7M6kqQlyiEx-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="d8MfeKyyR7M6kqQlyiEx-6" target="d8MfeKyyR7M6kqQlyiEx-9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="404" y="705" as="sourcePoint" />
+            <mxPoint x="454" y="655" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d8MfeKyyR7M6kqQlyiEx-11" value="Display C" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="364" y="695" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="d8MfeKyyR7M6kqQlyiEx-12" value="End" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="344" y="825" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d8MfeKyyR7M6kqQlyiEx-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.543;exitY=0.985;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="d8MfeKyyR7M6kqQlyiEx-9" target="d8MfeKyyR7M6kqQlyiEx-11" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="404" y="705" as="sourcePoint" />
+            <mxPoint x="454" y="655" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d8MfeKyyR7M6kqQlyiEx-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="d8MfeKyyR7M6kqQlyiEx-11" target="d8MfeKyyR7M6kqQlyiEx-12" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="404" y="715" as="sourcePoint" />
+            <mxPoint x="454" y="655" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d8MfeKyyR7M6kqQlyiEx-16" value="Tên: Nguyễn Vinh Thiện" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry width="210" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,80 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.7 Chrome/138.0.7204.251 Electron/37.7.1 Safari/537.36" version="28.2.7">
+  <diagram name="Page-1" id="Mw9v0Z5iFZcgxmDPfNjW">
+    <mxGraphModel dx="1678" dy="2099" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-1" value="Tên: Nguyễn Vinh Thiện" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="-1100" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-2" value="Input N ngẫu nhiên từ 0 - 9" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="308" y="-820" width="235" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-3" value="Begin" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="-960" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="s4pRfVEos3s3Bg2JtK5J-3" target="s4pRfVEos3s3Bg2JtK5J-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="415" y="-530" as="sourcePoint" />
+            <mxPoint x="465" y="-580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="s4pRfVEos3s3Bg2JtK5J-2" target="s4pRfVEos3s3Bg2JtK5J-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="-760" as="sourcePoint" />
+            <mxPoint x="670" y="-490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-7" value="Input M" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="-680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="s4pRfVEos3s3Bg2JtK5J-8" target="s4pRfVEos3s3Bg2JtK5J-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="s4pRfVEos3s3Bg2JtK5J-8" target="s4pRfVEos3s3Bg2JtK5J-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-8" value="N == M" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="385" y="-540" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="s4pRfVEos3s3Bg2JtK5J-7" target="s4pRfVEos3s3Bg2JtK5J-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="551" y="-600" as="sourcePoint" />
+            <mxPoint x="550" y="-520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="s4pRfVEos3s3Bg2JtK5J-10" target="s4pRfVEos3s3Bg2JtK5J-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="648" y="-340" />
+              <mxPoint x="426" y="-340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-10" value="Output &quot;Sai&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="513" y="-440" width="235" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="s4pRfVEos3s3Bg2JtK5J-11" target="s4pRfVEos3s3Bg2JtK5J-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="221" y="-340" />
+              <mxPoint x="426" y="-340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-11" value="Output &quot;Đúng&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="103" y="-440" width="235" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-12" value="Begin" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345.5" y="-280" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-17" value="YES" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="-530" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-18" value="NO" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="-530" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

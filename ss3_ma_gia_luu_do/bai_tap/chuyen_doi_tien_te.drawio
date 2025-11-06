@@ -1,0 +1,52 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.7 Chrome/138.0.7204.251 Electron/37.7.1 Safari/537.36" version="28.2.7">
+  <diagram name="Page-1" id="Mw9v0Z5iFZcgxmDPfNjW">
+    <mxGraphModel dx="1783" dy="2161" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-1" value="Tên: Nguyễn Vinh Thiện" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry y="-1100" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-2" value="Input N (số đô la tiền Mỹ(USD))" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="308" y="-820" width="235" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-3" value="Begin" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="345" y="-960" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="s4pRfVEos3s3Bg2JtK5J-3" target="s4pRfVEos3s3Bg2JtK5J-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="415" y="-530" as="sourcePoint" />
+            <mxPoint x="465" y="-580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s4pRfVEos3s3Bg2JtK5J-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="s4pRfVEos3s3Bg2JtK5J-2" target="v8tHL-jijaBj_QFfKZnU-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="-760" as="sourcePoint" />
+            <mxPoint x="425" y="-680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v8tHL-jijaBj_QFfKZnU-1" value="VND = n * 23,000" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="-700" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v8tHL-jijaBj_QFfKZnU-2" value="Output VND" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="308" y="-560" width="235" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="v8tHL-jijaBj_QFfKZnU-3" value="End" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="-410" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="v8tHL-jijaBj_QFfKZnU-4" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="v8tHL-jijaBj_QFfKZnU-1" target="v8tHL-jijaBj_QFfKZnU-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="496" y="-720" as="sourcePoint" />
+            <mxPoint x="410" y="-620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v8tHL-jijaBj_QFfKZnU-5" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="v8tHL-jijaBj_QFfKZnU-2" target="v8tHL-jijaBj_QFfKZnU-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="486" y="-560" as="sourcePoint" />
+            <mxPoint x="400" y="-460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
