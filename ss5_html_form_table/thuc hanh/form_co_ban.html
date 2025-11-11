@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form cơ bản</title>
+</head>
+<body>
+    <form method="get" action="simpleform.html">
+        <h1>Order Form</h1>
+        <h3>What would you like to buy?</h3>
+        <select>
+            <option value = " ">A</option>
+            <option>B (+ 0.5$)</option>
+            <option>C (+ 0.5$)</option>
+        </select>
+        <h3>How many would you like to order?</h3>
+        <input type="radio" name="rd"/> <strong>1 - $10</strong> <br/>
+        <input type="radio" name="rd"/> <strong>2 - $20</strong> <br/>
+        <input type="radio" name="rd"/> <strong>3 - $25</strong> <br/>
+        <h3>Name <span style="color: red">*</span> </h3>
+        <input type="text" name="FirstName" placeholder="FirstName" style="width: 100px">
+        <input type="text"  name="LastName" placeholder="LastName" style="width: 100px">
+        <h3>Email</h3>
+        <input type="text" style="width: 330px">
+        <h3>Phone Number</h3>
+        <input type="text" style="width: 50px"> - <input type="text"  style="width: 50px"> - <input type="text"  style="width: 50px">
+        <br/>
+        <br/>
+        <button name="Submit">Submit</button>
+
+    </form>
+
+</body>
+</html>
