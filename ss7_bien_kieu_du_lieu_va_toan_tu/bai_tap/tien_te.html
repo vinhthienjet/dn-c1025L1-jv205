@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change money</title>
+</head>
+<body>
+    <!--input so tien(Amount)-->
+    <div>
+        <p> Amount</p>
+        <input name="amount" type="number" min = "1" id="amount" >
+    </div>
+
+    <!--input from currency-->
+    <div>
+        <p> From Currency</p>
+        <select id="fromCurrency">
+            <option value="usd">USD</option>
+            <option value="vnd">VND</option>
+        </select>
+    </div>
+
+    <!--input to currency-->
+    <div>
+        <p>To Currency</p>
+        <select id="toCurrency">
+            <option value="vnd" >VND</option>
+            <option value="usd" >USD</option>
+        </select>
+    </div>
+    <br/>
+
+     <!-- Button convert-->
+    <button id="convert" onclick="transformCurrency()" >Convert</button>
+        <h3 id="result"> Result:</h3>
+
+<script>
+    //Table change money
+    let vndChange = {
+        'vnd' : 1,
+        'usd': 25000,
+    };
+    function transformCurrency(amount, fromCurrency, toCurrency) {
+        // let all in
+        fromCurrency  = document.getElementById('fromCurrency').value;
+        amount = +document.getElementById('amount').value;
+        toCurrency = document.getElementById('toCurrency').value;
+
+        // B1: Change về VND
+        let amountInVND = amount * vndChange[fromCurrency];
+
+        // B2: Change về To Currency
+        let end = amountInVND / vndChange[toCurrency];
+
+        // B3: Hiện kết Quả
+        document.getElementById("result").innerText = "Result: " + end + "VND";
+    }
+
+
+
+</script>
+</body>
+</html>
