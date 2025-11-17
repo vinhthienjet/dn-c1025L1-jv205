@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+
+  <style>
+    input {
+      width: 150px;
+      height: 25px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 5px;
+      margin: 5px;
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<input id="num1" type="number" placeholder="Number 1" s >
+<input id="num2" type="number" placeholder="Number 2">
+<br>
+
+<button onclick="calc('+')">Addition(+)</button>
+<button onclick="calc('-')">Subtraction(-)</button>
+<button onclick="calc('*')">Multiplication(X)</button>
+<button onclick="calc('/')">Division(/)</button>
+
+<p id="result" style="color: RED ; font-size: 20px;text-align: center"></p>
+
+<script>
+  function calc(op) {
+    let a = parseFloat(document.getElementById("num1").value);
+    let b = parseFloat(document.getElementById("num2").value);
+    let res;
+
+    switch (op) {
+      case '+': res = a + b; break;
+      case '-': res = a - b; break;
+      case '*': res = a * b; break;
+      case '/':
+        res = b !== 0 ? a / b : "Cannot / by 0";
+    }
+
+    document.getElementById("result").innerText = "Result: " + res;
+  }
+</script>
+
+</body>
+</html>
