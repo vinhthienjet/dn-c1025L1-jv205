@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>aaaaa</title>
+</head>
+<body>
+<h2>Tuoi de hoc lop 10</h2>
+<label>Input your age: </label>
+
+<input id="a" type="number" /> <br />
+<br />
+
+<button onclick="tuoi()">==></button>
+
+<p id="end"></p>
+
+<script>
+  function tuoi() {
+    let a = parseFloat(document.getElementById("a").value);
+    if (a >= 15) {
+      document.getElementById("end").innerText = "Da du tuoi hoc lop 10";
+    } else {
+      document.getElementById("end").innerText = "Khong du tuoi hoc lop 10";
+    }
+  }
+</script>
+</body>
+</html>

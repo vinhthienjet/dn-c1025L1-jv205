@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>aaaaa</title>
+</head>
+<body>
+<h2>Cuoc dien thoai</h2>
+<p>------------------------</p>
+<h4>Don gia noi mang: 15.000 VND</h4>
+<h4>Don gia ngoai mang: 20.000 VND</h4>
+
+<label>So phut goi noi mang: </label>
+<input id="a" type="number" /> <br /><br />
+
+<label>So phut goi ngoai mang: </label>
+<input id="b" type="number" /> <br /><br />
+
+<button onclick="cuocDTh()">==></button>
+<p id="end"></p>
+
+<script>
+  function cuocDTh() {
+    let a = parseFloat(document.getElementById("a").value);
+    let b = parseFloat(document.getElementById("b").value);
+    let cuoc = a * 15000 + b * 20000;
+    document.getElementById("end").innerText = "Cuoc dien thoai: " + cuoc;
+  }
+</script>
+
+</body>
+</html>

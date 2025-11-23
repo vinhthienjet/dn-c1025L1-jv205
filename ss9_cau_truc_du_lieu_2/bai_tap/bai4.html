@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>aaaaa</title>
+</head>
+<body>
+<h2>Max</h2>
+<label>Input a: </label>
+<input id="a" type="number" /> <br />
+<br />
+
+<label>Input b: </label>
+<input id="b" type="number" /> <br />
+<br />
+
+<label>Input c: </label>
+<input id="c" type="number" /> <br />
+<br />
+
+<button onclick="chia()">==></button>
+<p id="end"></p>
+
+<script>
+  function chia() {
+    let a = parseFloat(document.getElementById("a").value);
+    let b = parseFloat(document.getElementById("b").value);
+    let c = parseFloat(document.getElementById("c").value);
+    if (a > b && a > c) {
+      document.getElementById("end").innerText = "A la max";
+    } else if (b > c) {
+      document.getElementById("end").innerText = "B la max";
+    } else {
+      document.getElementById("end").innerText = "C la max";
+    }
+  }
+</script>
+</body>
+</html>

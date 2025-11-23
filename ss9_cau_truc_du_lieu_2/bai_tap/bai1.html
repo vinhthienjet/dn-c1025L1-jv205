@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>aaaaa</title>
+</head>
+<body>
+<h2>a and b</h2>
+<label>Input a: </label>
+<input id="a" type="number" /> <br />
+<br />
+
+<label>Input b: </label>
+<input id="b" type="number" />
+
+<button onclick="chia()">==></button>
+<p id="end"></p>
+
+<script>
+  function chia() {
+    let a = parseFloat(document.getElementById("a").value);
+    let b = parseFloat(document.getElementById("b").value);
+    if (a % b === 0) {
+      document.getElementById("end").innerText = "A chia het cho B";
+    } else {
+      document.getElementById("end").innerText = "A khong chia het cho B";
+    }
+  }
+</script>
+</body>
+</html>

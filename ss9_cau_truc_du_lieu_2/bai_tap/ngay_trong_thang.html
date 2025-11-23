@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Số Ngày Trong Tháng</h2>
+
+
+<input id="month" type="number" placeholder="Month">
+<button id="input" onclick="calDay()" >Input your month</button>
+
+<p id="result" ></p>
+
+
+
+<script>
+    function calDay(){
+        let month = parseInt(document.getElementById("month").value);
+        let numDay = 0;
+        if( 1>month || month >12){
+            document.getElementById("result").innerText= "Month sai";
+        } else {
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    numDay = 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    numDay = 30;
+                    break;
+                default:
+                    document.getElementById("result").innerText = "Tháng 2 có 28 hoặc 29 ngày tùy vào năm";
+                    return;
+            }
+            document.getElementById("result").innerText = "Tháng" + month + " có " + numDay+" ngày";
+        }
+
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

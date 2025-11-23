@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>aaaaa</title>
+</head>
+<body>
+<h2>So nguyen</h2>
+<label>Input Number Int: </label>
+<input id="a" type="number" /> <br />
+<br />
+
+<button onclick="soNguyen()">==></button>
+<p id="end"></p>
+
+<script>
+  function soNguyen() {
+    let a = parseInt(document.getElementById("a").value);
+    if (a > 0) {
+      document.getElementById("end").innerText = "so " + a + " > hon 0";
+    } else if (a < 0) {
+      document.getElementById("end").innerText = "so " + a + " < hon 0";
+    } else {
+      document.getElementById("end").innerText = "so " + a + " = 0";
+    }
+  }
+</script>
+</body>
+</html>

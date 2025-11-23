@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>aaaaa</title>
+</head>
+<body>
+<h2>Hoa Hong(15%)</h2>
+<label>Danh thu nha hang: </label>
+<input id="a" type="number" /> <br />
+<br />
+
+<button onclick="hoaHong()">==></button>
+<p id="end"></p>
+
+<script>
+  function hoaHong() {
+    let a = parseFloat(document.getElementById("a").value);
+    let hoaHong = a * (15 / 100);
+    if (a < 0) {
+      document.getElementById("end").innerText = "Nhap lai doanh thu";
+    } else {
+      document.getElementById("end").innerText =
+              "Hoa hong nhan duoc la " + hoaHong;
+    }
+  }
+</script>
+</body>
+</html>

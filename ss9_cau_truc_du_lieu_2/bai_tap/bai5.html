@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Xep loai hoc luc</title>
+</head>
+<body>
+<h2>Xep loai hoc luc</h2>
+
+<label>Diem kiem tra: </label>
+<input id="kt" type="number" /> <br /><br />
+
+<label>Diem giua ky: </label>
+<input id="gk" type="number" /> <br /><br />
+
+<label>Diem cuoi ky: </label>
+<input id="ck" type="number" /> <br /><br />
+
+<button onclick="xeploai()">Tinh</button>
+
+<p id="kq"></p>
+
+<script>
+  function xeploai() {
+    let kt = parseFloat(document.getElementById("kt").value);
+    let gk = parseFloat(document.getElementById("gk").value);
+    let ck = parseFloat(document.getElementById("ck").value);
+
+    let dtb = kt * 0.2 + gk * 0.3 + ck * 0.5;
+
+    let loai = "";
+
+    if (dtb >= 8) {
+      loai = "Gioi";
+    }
+    else if (dtb >= 6.5) {
+      loai = "Kha";
+    }
+    else if (dtb >= 5) {
+      loai = "Trung binh";
+    }
+    else if (dtb >= 3.5) {
+      loai = "Yeu";
+    }
+    else {
+      loai = "Kem";
+    }
+
+    document.getElementById("kq").innerText = "Diem trung binh: " + dtb + " -> Xep loai: " + loai;
+  }
+</script>
+
+</body>
+</html>

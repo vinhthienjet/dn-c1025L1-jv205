@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính Chỉ Số Cơ Thể</title>
+</head>
+<body>
+<h2>Tính Chỉ Số Cơ Thể</h2>
+
+<label>Input your weight (kg):</label>
+<input type="number" placeholder="Weight" id="weight" > <br/><br/>
+
+<label>Input your height (cm):</label>
+<input type="number" placeholder="Height" id="height" > <br/><br/>
+
+<button onclick="calBMI()">Show BMI</button>
+<p id="outBMI"></p>
+
+<script>
+  function calBMI(){
+    let weight = parseFloat(document.getElementById("weight").value);
+    let height = parseFloat(document.getElementById("height").value);
+
+    if (!weight || !height) {
+      alert("Please enter both weight and height!");
+      return;
+    }
+
+    let bmi = weight / (height * height);
+    let resultText = "";
+
+    if(bmi < 18.5){
+      resultText = "Underweight";
+    } else if(bmi >= 18.5 && bmi < 25){
+      resultText = "Normal";
+    } else if(bmi >= 25 && bmi < 30){
+      resultText = "Overweight";
+    } else {
+      resultText = "Obese";
+    }
+
+    // Hiển thị kết quả trong thẻ p
+    alert("BMI: " + bmi + " " + resultText);
+  }
+</script>
+</body>
+</html>
+
+
