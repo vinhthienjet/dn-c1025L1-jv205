@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tong 30 so dau tien chia het cho 7</h2>
+<script>
+  let sum = 0;
+  let soChiaHetCho7 = 0
+  for (let number = 1;number < 1000;number++){
+if(number % 7 ===0 ){
+  soChiaHetCho7++;
+  sum += number;
+}
+if (soChiaHetCho7 ===30){
+  document.writeln(sum);
+  break;
+}
+  }
+
+
+
+
+</script>
+</body>
+</html>

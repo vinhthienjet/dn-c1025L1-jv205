@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20 so nguyen to dau</title>
+</head>
+<body>
+<h2>20 so nguyen to dau tien <br/></h2>
+
+<script>
+
+  let soThuTu = 0;
+  let num =2 ;
+  while (soThuTu <20){
+    let uoc =0;
+
+    for (let i =1 ; i <= num;i++){
+
+      if(num %i ===0){
+        uoc ++;
+      }
+    }
+    if (uoc ===2){
+      soThuTu++;
+      document.writeln("Số nguyên tố thứ " + soThuTu + ": " + num + "<br/>");
+    }
+    num++;
+  }
+</script>
+</body>
+</html>

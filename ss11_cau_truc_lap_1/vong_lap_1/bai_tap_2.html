@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiểm tra Nhiệt Độ</title>
+</head>
+<body>
+
+<h2>Kiểm tra nhiệt độ</h2>
+<button onclick="kiemTraNhietDo()">Nhập nhiệt độ</button>
+
+<script>
+  function kiemTraNhietDo() {
+    let nhietDo = +prompt("Nhập nhiệt độ hiện tại:");
+
+
+    if (isNaN(nhietDo)) {
+      alert("Vui lòng nhập một số hợp lệ!");
+      return;
+    }
+
+    if (nhietDo > 100) {
+      alert("Nhiệt độ quá cao! Vui lòng giảm nhiệt độ.");
+    }
+    else if (nhietDo < 20) {
+      alert("Nhiệt độ quá thấp! Vui lòng tăng nhiệt độ.");
+    }
+    else {
+      alert("Nhiệt độ bình thường.");
+    }
+  }
+</script>
+
+</body>
+</html>

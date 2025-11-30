@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bảng cửu chương 1-9</title>
+</head>
+<body>
+
+<h2>Bảng cửu chương 1-9  </h2>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <script>
+      for(let n = 1; n <= 9; n++){
+        document.write('<td>');
+        document.write('Bảng ' + n + '<br>');
+        for(let i = 1; i <= 9; i++){
+          document.write(n + ' × ' + i + ' = ' + (n*i) + '<br>');
+        }
+        document.write('</td>');
+      }
+    </script>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+  let a = 0, b = 1;
+  for (let i = 3; i <= 100; i++) {
+    let c = a + b;
+    if (c % 5 === 0){
+      document.writeln(c+'<br/>');
+    }
+    a = b;
+    b = c;
+  }
+</script>
+
+</body>
+</html>

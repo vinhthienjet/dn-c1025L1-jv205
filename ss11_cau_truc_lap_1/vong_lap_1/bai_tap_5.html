@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+  let a = 0, b = 1;
+  let sum = a + b ;
+  document.write(a + " " + b + " ");
+
+  for (let i = 3; i <= 20; i++) {
+    let c = a + b;
+    sum += c;
+    a = b;
+    b = c;
+  }
+  document.writeln('<br/>'+sum);
+
+
+</script>
+
+</body>
+</html>

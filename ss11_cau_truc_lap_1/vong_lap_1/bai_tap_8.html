@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Doan So</title>
+</head>
+<body>
+<h2>Chao mung dem voi game doan so</h2>
+<p>Chuong trinh da tao 1 so bat ki tu 1 cho den 10</p>
+<p>hay doan 1 so bat ki ma ban nghi la dung</p>
+<p>Luu y: Ban chi co 3 la doan</p>
+<input id="soDoan" placeholder="Input YourNumber" type="number">
+<button onclick="playGame()" >Doan so</button>
+<p id="ketQua"></p>
+
+
+<script>
+    let min = 1;
+    let max = 10;
+    let soLuotDoan =0;
+    let soRamdom = min + Math.floor(Math.random()*(max-min+1));
+function playGame() {
+    let yourNumber = parseInt(document.getElementById("soDoan").value);
+    soLuotDoan++;
+        if(yourNumber == soRamdom){
+            document.getElementById("ketQua").innerHTML = "Ban da doan chinh xac";
+        } else if(yourNumber > soRamdom){
+            document.getElementById("ketQua").innerHTML = "Ban da doan so lon hon so da cho";
+        } else if(yourNumber < soRamdom){
+            document.getElementById("ketQua").innerHTML = "Ban da doan so nho hon so da cho";
+
+        }
+        if(soLuotDoan > 3){
+            document.getElementById("ketQua").innerHTML = "Tro choi ket thuc,Ban da doan het so luot quy dinh :((";
+        }
+}
+
+</script>
+</body>
+</html>
