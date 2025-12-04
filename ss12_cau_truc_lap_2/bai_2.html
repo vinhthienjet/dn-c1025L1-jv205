@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>giai thua </title>
+</head>
+<body>
+<div id="result"></div>
+
+<script>
+  let n = prompt("gia thua ___ ?: ");
+  let factorial = 1;
+
+  for (let i = 1; i <= n; i++) {
+    factorial *= i;
+  }
+
+  document.getElementById("result").innerHTML = n + "! = " + factorial;
+</script>
+
+</body>
+</html>

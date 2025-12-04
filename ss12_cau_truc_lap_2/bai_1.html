@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>day so</title>
+</head>
+<body>
+
+<h3>Dãy Fibonacci</h3>
+<div id="fibo"></div>
+
+<script>
+  let n = prompt("Nhập chiều dài của dãy: ")
+  let a = 0, b = 1;
+  let result = a + " " + b + " ";
+
+  for (let i = 3; i <= n; i++) {
+    let next = a + b;
+    result += next + " ";
+    a = b;
+    b = next;
+  }
+
+  document.getElementById("fibo").innerHTML = result;
+</script>
+
+</body>
+</html>
