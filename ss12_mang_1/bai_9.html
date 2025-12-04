@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xoa V</title>
+</head>
+<body>
+<script>
+  let arrayA = [];
+  let arrayB = [];
+  let arrayC = [];
+  for (let i = 0; i < 10; i++) {
+    let x = +prompt("Array A:  "+(i+1));
+    arrayA.push(x);
+  }
+  alert("Mang A: "+arrayA);
+  for (let i = 0; i < 10; i++) {
+    let x = +prompt("Array B: "+(i+1));
+    arrayB.push(x);
+  }
+  alert("Mang B: "+arrayB);
+  arrayC = [arrayA, arrayB];
+  alert(arrayC);
+</script>
+</body>
+</html>

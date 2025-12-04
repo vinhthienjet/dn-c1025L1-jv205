@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for (let i = 0; i < 5; i++) {
+        let x = prompt("Array :  " + (i + 1));
+        array.push(x);
+    }
+    alert("Array: " + array);
+
+    moveV();
+
+    function moveV() {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === "v") {
+                // xóa phần tử 'v' khỏi vị trí i
+                array.splice(i, 1);
+                array.push("0");
+            }
+        }
+        alert("Array sau khi đưa 'v' xuống cuối: " + array);
+    }
+</script>
+</body>
+</html>

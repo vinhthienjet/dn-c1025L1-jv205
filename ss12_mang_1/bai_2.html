@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>max va vi tri</title>
+</head>
+<body>
+<h2>Hien gia tri va vi tri cua so lon nhat</h2>
+<h2>Co 10 phan tu trong mang</h2>
+
+
+
+<script>
+  let array = [];
+  for (let i = 0; i < 10; i++) {
+    let n = +prompt("so "+(i+1));
+    array.push(n);
+  }
+  max();
+function max(){
+    let max = 0;
+    let local = 0;
+  for (let i = 0; i < array.length; i++) {
+    if(max < array[i]){
+      max = array[i];
+      local = i+1;
+    }
+  }
+  alert("Max: "+ max + " Vi tri: "+local+ " Chuoi array: " + array );
+}
+</script>
+</body>
+</html>

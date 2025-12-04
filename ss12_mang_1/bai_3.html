@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trung binh</title>
+</head>
+<body>
+<script>
+  let n = +prompt("Nhap so phan tu ");
+  let array = [];
+  for (let i = 0; i < n; i++) {
+    let x = +prompt("so "+(i+1));
+    array.push(x);
+  }
+  max();
+  trungBinh();
+  function max(){
+   let max = 0;
+    for (let i = 0; i < array.length; i++) {
+      if(max < array[i]){
+        max = array[i];
+      }
+    }
+    alert("Max: "+ max);
+  }
+  function trungBinh(){
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    alert("trung binh cac phan tu: " + sum / n);
+  }
+</script>
+</body>
+</html>

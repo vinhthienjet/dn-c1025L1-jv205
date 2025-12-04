@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>V</title>
+</head>
+<body>
+<script>
+  let array = [];
+  for (let i = 0; i < 10; i++) {
+    let x = prompt("so "+(i+1));
+    array.push(x);
+  }
+  v();
+  function v() {
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === "v" || array[i] === 'V') {
+        sum ++;
+      }
+    }
+    if(sum > 0){
+      alert("V is in the array");
+    } else {
+      alert("V is not in the array");
+    }
+  }
+</script>
+</body>
+</html>
