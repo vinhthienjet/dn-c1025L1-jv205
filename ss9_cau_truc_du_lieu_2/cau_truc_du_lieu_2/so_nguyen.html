@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Số nguyên</title>
 </head>
 <body>
-$END$
+<p id="soNT">So nguyen to: </p>
+    <script>
+        let tongSNT =  0 ;
+        let soNT = 1;
+
+        while (tongSNT < 20){
+            let countUoc = 0;
+            for (let i =1;i<=soNT;i++) {
+                if (soNT % i == 0) {
+                    countUoc++;
+                }
+            }
+                if(countUoc ==2){
+                    document.getElementById("soNT").innerText += soNT + " / ";
+
+
+                    tongSNT++;
+                }
+            soNT++;
+
+        }
+
+
+
+
+
+
+    </script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Từ điển Anh - Việt</title>
+</head>
+<body>
+
+<h2>Từ điển Anh - Việt</h2>
+
+<p><b>Các từ tiếng Anh có trong từ điển:</b></p>
+<ul id="wordList"></ul>
+
+<input type="text" id="wordInput" placeholder="Nhập từ tiếng Anh">
+<button onclick="searchWord()">Tìm kiếm</button>
+
+<p id="result"></p>
+
+<script>
+  let english = ["dog", "cat", "fish", "car", "house"];
+  let vietnamese = ["con chó", "con mèo", "con cá", "xe hơi", "ngôi nhà"];
+
+  // In danh sách tiếng Anh
+  let listArea = document.getElementById("wordList");
+  for (let i = 0; i < english.length; i++) {
+    listArea.innerHTML += "<li>" + english[i] + "</li>";
+  }
+
+  function searchWord() {
+    let word = document.getElementById("wordInput").value.toLowerCase();
+    let index = english.indexOf(word);
+
+    if (index !== -1) {
+      document.getElementById("result").innerHTML =
+              "Nghĩa tiếng Việt: <b>" + vietnamese[index] + "</b>";
+    } else {
+      document.getElementById("result").innerHTML =
+              "Không tìm thấy!";
+    }
+  }
+</script>
+
+</body>
+</html>
