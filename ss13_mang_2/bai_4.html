@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Đếm số từ</title>
+</head>
+<body>
+<script>
+  // nhap chuoi tu nguoo dung
+  let str = prompt("nhap chuoi:");
+
+  // xoa va tach chuoi thanh nhieu phan tu nho
+  let words = str.trim().split(/\s+/);
+
+  // neu chuoi rong
+  let count = (str.trim() === "") ? 0 : words.length;
+
+  document.write("Chuỗi: " + str + "<br>");
+  document.write("Số từ: " + count);
+</script>
+</body>
+</html>

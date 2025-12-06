@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //so ky tu co trong mang
+  let n = prompt("Nhap so phan tu co trong mang");
+  let a = [] ;
+
+  //Nhap tung phan tu vao mang
+  for (let i = 0; i < n; i++) {
+    let x = prompt("Phan tu thu " + (i+1));
+    a.push(x);
+  }
+
+  //Dem so phan tu
+  let count = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] >= '0' && a[i] <= '9') {
+      count++;
+    }
+  }
+
+  //In ket qua
+  document.write("Cac phan tu trong mang " + a + '<br/>');
+  document.write("So Ky tu trong mang " + count);
+</script>
+</body>
+</html>

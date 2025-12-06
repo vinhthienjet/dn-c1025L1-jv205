@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  // Nhap so ky tu
+  let n = +prompt("Nhap so ky tu trong mang");
+  let a = [];
+
+  // Nhap tung phan tu vao mang
+  for (let i = 0; i < n; i++) {
+    let x = prompt("Ky tu thu " + (i+1));
+    a.push(x);
+  }
+
+  //Thay the ky tu
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] === '-'){
+      a[i] = '_' ;
+    }
+  }
+  prompt(a);
+</script>
+</body>
+</html>
