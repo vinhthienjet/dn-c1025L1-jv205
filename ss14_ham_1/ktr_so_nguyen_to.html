@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let num1 = +prompt("Nhap so nguyen to muon kiem tra");
+    isPrime(num1);
+
+    function isPrime(num) {
+        if (isNaN(num) || num < 2 ){
+            alert("Nhap lai !!!");
+            return ;
+        }
+
+        for (let i = 2; i < Math.sqrt(num); i++) {
+            if (num % i ===0){
+                alert(num+" khong phai la so nguyen to");
+                return;
+            }
+        }
+        alert(num+" la so nguyen to");
+    }
+</script>
+
+</body>
+</html>

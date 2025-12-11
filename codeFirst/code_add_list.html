@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="name" placeholder="Nhập tên sản phẩm ">
+<button onclick="addNewProduct()">Thêm mới</button>
+<p id="display"></p>
+<script>
+    let productList = ["sam sung", "iphone","nokia"];
+    display();
+
+    function addNewProduct(){
+        let name = document.getElementById("name").value;
+        if (name!==""){roductList.push(name);
+        }else {
+            alert("Cần phải nhập tên sản phẩm ")
+            p
+        }
+
+        document.getElementById("name").value ="";
+        display();
+    }
+
+    function display(){
+        let tableString =`<table border="1">
+                        <tr>
+                            <th>STT</th>
+                            <th>Name</th>
+                            <th>Delete</th>
+                        </tr>`;
+        for (let i = 0; i <productList.length ; i++) {
+
+            // template literal
+            tableString+=`<tr>
+                            <td>${i+1}</td>
+                            <td>${productList[i]}</td>
+                            <td><button onclick="deleteProduct(${i})">Delete</button></td>
+                        </tr>`
+        }
+        tableString +=`</table>`;
+        document.getElementById("display").innerHTML = tableString;
+    }
+    function deleteProduct(index) {
+        let conf = confirm("Bạn có muốn xoá sản phẩm "+productList[index] + " không?")
+        if (conf){
+            productList.splice(index,1);
+            display();
+        }
+    }
+
+</script>
+</body>
+</html>

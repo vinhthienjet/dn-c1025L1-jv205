@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>So nguyen duong</title>
+</head>
+<body>
+<h2>Kiểm tra So nguyen duong</h2>
+
+<input id="a" type="number" placeholder="Nhập so muon kiem ta" style="width: 200px;"> <br/><br/>
+<button onclick="kiemTra()">Kiểm tra</button>
+
+<p id="ketQua"></p>
+
+<script>
+  function kiemTra() {
+    let a = parseInt(document.getElementById("a").value);
+
+    if (!isNaN(a) && a > 0 ) {
+      document.getElementById("ketQua").innerHTML = a + " la nguyen duong.";
+    } else {
+      document.getElementById("ketQua").innerHTML = a + " khong phai so nguyen duong.";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+
+  // tao ham nhap 2 tham so
+  // neu so thu 1 > thu 2 => hien thi thong bao cho nguoi dung
+  // neu so thu 1 <= thu 2 => tra ve tong 2 tham so
+  let numberA = +prompt("A");
+  let numberB = +prompt("B");
+  soSanh(numberA,numberB);
+
+  function soSanh(x,y){
+    let tong = 0;
+    if(x > y){
+        alert(x+" > "+y);
+    } else {
+      tong = x + y ;
+      alert(x+y);
+    }
+  }
+
+</script>
+</body>
+</html>

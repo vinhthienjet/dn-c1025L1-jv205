@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiem tra ky tu so</title>
+</head>
+<body>
+<h2>Kiểm tra ký tự số</h2>
+
+<input id="charInput" placeholder="Nhập 1 ký tự..." style="width: 200px;">
+<button onclick="kiemTra()">Kiểm tra</button>
+
+<p id="ketQua"></p>
+
+<script>
+
+  function isDigit(char) {
+    if (char.length !== 1) {
+      return false;
+    } else {
+    return char >= '0' && char <= '9';
+  }
+    }
+
+  function kiemTra() {
+    let char = document.getElementById("charInput").value;
+
+    if (isDigit(char)) {
+      document.getElementById("ketQua").innerHTML = char + " là ký tự số.";
+    } else {
+      document.getElementById("ketQua").innerHTML = char + " KHÔNG phải là ký tự số.";
+    }
+  }
+</script>
+
+</body>
+</html>

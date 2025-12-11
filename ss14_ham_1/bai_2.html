@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<input id="inputNum" placeholder="input your number">
+<button onclick="showResult()">Ok</button>
+
+<p id="ketQua"></p>
+
+<script>
+  // Hàm tăng giá trị lên 1 và TRẢ VỀ kết quả
+  function plus1(num) {
+    num = parseInt(num);
+    return num + 1;
+  }
+
+  // Hàm gọi từ body để hiển thị kết quả
+  function showResult() {
+    let value = document.getElementById("inputNum").value;
+    let result = plus1(value);
+    document.getElementById("ketQua").innerHTML = result;
+  }
+</script>
+
+</body>
+</html>

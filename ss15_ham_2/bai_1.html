@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tinh binh phuong</title>
+</head>
+<body>
+<h2>Tinh binh phuong</h2>
+<input id="number" placeholder="Nhap so ban muon binh phuong" style="width: 200px;">
+<button onclick="binhPhuong()">Ket qua</button>
+<p id="ketQua"></p>
+
+<script>
+  function binhPhuong(){
+    let num = parseInt(document.getElementById("number").value);
+      let tinh = num * num;
+      document.getElementById("ketQua").innerHTML = "Binh phuong cua " + num + " : " + tinh;
+  }
+</script>
+</body>
+</html>

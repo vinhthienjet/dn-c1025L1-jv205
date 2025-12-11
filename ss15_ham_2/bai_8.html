@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dao chuoi</title>
+</head>
+<body>
+<h2>Dao chuoi</h2>
+<button onclick="kiemTra()">An de nhap chuoi</button>
+
+<p id="ketQua1"></p>
+
+<script>
+  function kiemTra() {
+    let array = [];
+    let n = prompt("Nhap so phan tu muon truyen vao")
+    for (let i = 0; i < n; i++) {
+    let a =  prompt("phan tu thu "+(i+1));
+    array.push(a);
+    }
+    alert("chuoi truoc khi dao =>"+array);
+    array.reverse();
+    alert("chuoi sau khi dao =>"+array);
+  }
+</script>
+
+</body>
+</html>

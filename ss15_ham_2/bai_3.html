@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tinh giai thua</title>
+</head>
+<body>
+<h2>Tinh giai thua</h2>
+<input id="number" placeholder="Nhap so ban muon tinh giai thua" style="width: 200px;">
+<button onclick="giaiThua()">Ket qua</button>
+<p id="ketQua"></p>
+
+<script>
+  function giaiThua(){
+    let num = parseInt(document.getElementById("number").value);
+
+    if (isNaN(num) || num <= 0) {
+      alert("Vui long nhap so nguyen > 0");
+      return;
+    }
+
+    let tinh = 1;
+
+    for (let i = 1; i <= num; i++) {
+      tinh *= i;
+    }
+
+    document.getElementById("ketQua").innerHTML =
+            "Giai thua cua " + num + " : " + tinh;
+  }
+</script>
+</body>
+</html>

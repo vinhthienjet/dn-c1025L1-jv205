@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiểm tra ký tự số</title>
+</head>
+<body>
+<h2>Kiểm tra ký tự số</h2>
+
+<input id="a" placeholder="Nhập A" style="width: 200px;"> <br/><br/>
+<input id="b" placeholder="Nhập B" style="width: 200px;"> <br/><br/>
+<input id="c" placeholder="Nhập C" style="width: 200px;"> <br/><br/>
+<button onclick="kiemTra()">Kiểm tra</button>
+
+<p id="ketQua"></p>
+
+<script>
+  function kiemTra() {
+    let a = parseInt(document.getElementById("a").value);
+    let b = parseInt(document.getElementById("b").value);
+    let c = parseInt(document.getElementById("c").value);
+
+    if (a < b && a < c) {
+      document.getElementById("ketQua").innerHTML = a + " la so nho nhat.";
+    }  else if (b < c) {
+      document.getElementById("ketQua").innerHTML = b + " la so nho nhat.";
+    } else {
+      document.getElementById("ketQua").innerHTML = c + " la so nho nhat.";
+    }
+  }
+</script>
+
+</body>
+</html>

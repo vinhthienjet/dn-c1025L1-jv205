@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tinh dien tich & chu vi hinh tron</title>
+</head>
+<body>
+<h2>Tinh dien tich & chu vi hinh tron</h2>
+<input id="number" type="number" placeholder="Nhap ban kinh hinh tron" style="width: 200px;">
+<button onclick="dienTich()">Dien tich</button>
+<button onclick="chuVi()">Chu vi</button>
+<p id="ketQua"></p>
+
+<script>
+  function dienTich(){
+    let num = parseInt(document.getElementById("number").value);
+    let tinhDT = Math.PI * num * num;
+    document.getElementById("ketQua").innerHTML = "Dien tich cua hinh tron ban kinh " + num + " : " + tinhDT;
+  }
+  function chuVi(){
+    let num = parseInt(document.getElementById("number").value);
+    let tinhCV = 2 * Math.PI * num;
+    document.getElementById("ketQua").innerHTML = "Chu vi cua hinh tron ban kinh " + num + " : " + tinhCV;
+  }
+</script>
+</body>
+</html>

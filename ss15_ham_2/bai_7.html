@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doi vi tri</title>
+</head>
+<body>
+<h2>Doi vi tri</h2>
+
+<input id="a" placeholder="Nhập A" style="width: 200px;"> <br/><br/>
+<input id="b" placeholder="Nhập B" style="width: 200px;"> <br/><br/>
+<button onclick="kiemTra()">Kiểm tra</button>
+
+<p id="ketQua1"></p>
+<p id="ketQua2"></p>
+
+<script>
+  function kiemTra() {
+    let a = parseInt(document.getElementById("a").value);
+    let b = parseInt(document.getElementById("b").value);
+    document.getElementById("ketQua1").innerHTML = ("Truoc khi doi vi tri <br>" + " So thu 1: "+ a +"<br>So thu 2: "+b);
+    let tam = 0;
+     tam = a;
+     a = b;
+     b = tam;
+    document.getElementById("ketQua2").innerHTML = ("Sau khi doi vi tri <br>" + " So thu 1: "+ a +"<br>So thu 2: "+b);
+  }
+</script>
+
+</body>
+</html>
