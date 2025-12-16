@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result" ></p>
+
+
+<script>
+  class Temperature {
+    constructor(celsius) {
+      if (celsius < -273){
+        this.celsius = - 273;
+      } else {
+        this.celsius = celsius;
+      }
+    }
+    toFahrenheit (){
+  return this.celsius * (9/5) + 32;
+    }
+    toKelvin (){
+  return this.celsius + 273.15;
+    }
+  }
+  let temperature = new Temperature(25);
+
+  document.getElementById("result").innerHTML = "Nhiet do la 25` <br/>" + "Do F: " + temperature.toFahrenheit() + "°F<br>" +
+          "Độ K: " + temperature.toKelvin() + " K";
+
+
+
+
+</script>
+</body>
+</html>

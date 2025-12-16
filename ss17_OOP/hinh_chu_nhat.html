@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rectangle</title>
+</head>
+<body>
+
+<canvas id="canvas" width="500" height="500" style="border: 1px solid red"></canvas>
+
+<script>
+  class Rectangle {
+    width;
+    height;
+
+    constructor(width, height) {
+      this.width = width;
+      this.height = height;
+    }
+
+    getArea() {
+      return this.width * this.height;
+    }
+
+    display(x, y, color) {
+      const canvas = document.getElementById("canvas");
+      const context = canvas.getContext("2d");
+
+      context.fillStyle = color;          // màu fill
+      context.fillRect(0, 0, this.width, this.height); // vẽ hình chữ nhật
+    }
+  }
+
+
+
+  let hcn1 = new Rectangle(125, 50); // hình mới
+
+  hcn1.display(2, 50, 'orange'); // 🟧 hình chữ nhật màu cam
+</script>
+
+</body>
+</html>
