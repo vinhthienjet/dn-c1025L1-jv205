@@ -5,6 +5,41 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let n;
+    do {
+        n = +prompt("Nhập số phần tử của mảng:");
+    } while (n <= 0);
 
+    let array = [];
+
+    for (let i = 0; i < n; i++) {
+        let x = +prompt("Nhập phần tử thứ " + (i + 1));
+        array.push(x);
+    }
+    alert(kTrChanLe(array));
+
+    function kTrChanLe(arr) {
+        let isAllEven = true;
+        let isAllOdd = true;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 !== 0) {
+                isAllEven = false;
+            }
+            if (arr[i] % 2 === 0) {
+                isAllOdd = false;
+            }
+        }
+
+        if (isAllEven) {
+            return 1;
+        } else if (isAllOdd) {
+            return 0;
+        } else {
+            return -1;
+        }
+    }
+</script>
 </body>
 </html>
