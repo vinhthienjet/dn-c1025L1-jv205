@@ -6,26 +6,34 @@
 </head>
 <body>
 <script>
+    let n;
 
-    let n = +prompt("Nhap so phan tu muon truyen vao");
+    do {
+        n = +prompt("Nhập số phần tử của mảng (n ≤ 20):");
+    } while (n <= 0 || n > 20);
+
     let array = [];
+
     for (let i = 0; i < n; i++) {
-      let x = prompt("Nhap phan tu thu " + (i+1));
-      array.push(x);
-    }
-    let isIncreasing = true;
-    for (let i = 0; i < array.length; i++) {
-      if (array[i] > array[i+1]){
-        isIncreasing = false;
-        break;
-      }
-    }
-    if (isIncreasing){
-      alert(array+ " true");
-    } else {
-      alert(array+" False")
+        let x = +prompt("Nhập phần tử thứ " + (i + 1));
+        array.push(x);
     }
 
+    alert("Mảng vừa nhập: " + array.join(", "));
+
+    let isIncreasing = true;
+    for (let i = 0; i < array.length - 1; i++) {
+        if (array[i] > array[i + 1]) {
+            isIncreasing = false;
+            break;
+        }
+    }
+
+    if (isIncreasing) {
+        alert("TRUE");
+    } else {
+        alert("FALSE");
+    }
 </script>
 </body>
 </html>

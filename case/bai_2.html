@@ -11,8 +11,8 @@
     let x = +prompt("Nhap canh x");
     let y = +prompt("Nhap canh y");
     let z = +prompt("Nhap canh z");
-    alert(checkTamGiac(x,y,z));
-    function checkTamGiac(x,y,z) {
+    alert(check(x,y,z));
+    function check(x,y,z) {
 
 
         // Không phải tam giác
@@ -21,9 +21,7 @@
         }
 
         // Tam giác vuông
-        if (x*x + y*y === z*z ||
-            x*x + z*z === y*y ||
-            y*y + z*z === x*x) {
+        if (x*x + y*y === z*z || x*x + z*z === y*y || y*y + z*z === x*x) {
             return "Là 3 cạnh của 1 tam giác vuông";
         }
 

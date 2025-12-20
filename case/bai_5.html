@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n = prompt("Nhap so 4 chu so");
+  alert(findMaxNumber(n));
+
+  function findMaxNumber(n) {
+    // Kiểm tra có phải số 4 chữ số hay không
+    if (n < 1000 || n > 9999) {
+      return -1;
+    }
+
+    let str = n.toString();
+    let max = 0;
+
+    // Xóa từng chữ số một
+    for (let i = 0; i < str.length; i++) {
+      let temp = str.slice(0, i) + str.slice(i + 1);
+      let num = parseInt(temp);
+
+      if (num > max) {
+        max = num;
+      }
+    }
+
+    return max;
+  }
+</script>
+</body>
+</html>
