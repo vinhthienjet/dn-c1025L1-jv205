@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quan li</title>
+</head>
+<body>
+<button onclick="appNew()" >Them hoc vien</button>
+<button onclick="Set()" >Sua hoc vien</button>
+<button onclick="del()" >Xoa hoc vien</button>
+<p id="display" ></p>
+<script>
+  class HocVien {
+
+    // Khai báo thuộc tính
+    maHocVien;
+    ten;
+    lop;
+    email;
+    ngaySinh;
+
+    constructor(maHocVien, ten, lop, email, ngaySinh){
+      this.maHocVien = maHocVien;
+      this.ten = ten;
+      this.lop = lop;
+      this.email = email;
+      this.ngaySinh = ngaySinh;
+    }
+  }
+
+
+  let arrayQuanLi = [];
+  display();
+
+  // App new
+  function appNew(){
+      let ma = +prompt("Nhập mã học viên");
+
+      // Format mã
+      if (ma < 10){
+          ma = "HV-000" + ma;
+      } else if (ma < 100) {
+          ma = "HV-00" + ma;
+      } else if (ma < 1000) {
+          ma = "HV-0" + ma
+      } else {
+          ma = "HV-" + ma;
+      }
+
+      // Nhập tên
+      let ten;
+      do {
+          ten = prompt("Nhập tên (tối đa 50 ký tự)");
+      } while (ten.length > 50);
+
+      let lop = prompt("Nhập lớp");
+      let email = prompt("Nhập email");
+
+      // Ngày sinh
+      let ngaySinh;
+      let ok = false;
+      do {
+          ngaySinh = prompt("Nhập ngày sinh (dd/mm/yyyy)");
+          let a = ngaySinh.split("/");
+          if (a.length === 3) {
+              let dd = +a[0], mm = +a[1], yy = +a[2];
+              if (dd>=1 && dd<=31 && mm>=1 && mm<=12 && yy>=1900 && yy<=2025) {
+                  ok = true;
+              }
+          }
+      } while (!ok);
+
+      let hv = new HocVien(ma, ten, lop, email, ngaySinh);
+      arrayQuanLi.push(hv);
+      display();
+  }
+
+  // Set
+  function Set(){
+      let maKtr = prompt("Nhập mã học viên cần sửa");
+      let timThay = false;
+
+      for (let i = 0; i < arrayQuanLi.length; i++) {
+          if (maKtr === arrayQuanLi[i].maHocVien) {
+              // Sửa thông tin
+              arrayQuanLi[i].ten = prompt("Nhập tên mới", arrayQuanLi[i].ten);
+              arrayQuanLi[i].lop = prompt("Nhập lớp mới", arrayQuanLi[i].lop);
+              arrayQuanLi[i].email = prompt("Nhập email mới", arrayQuanLi[i].email);
+              arrayQuanLi[i].ngaySinh = prompt("Nhập ngày sinh mới", arrayQuanLi[i].ngaySinh);
+
+              timThay = true;
+              break;
+          }
+      }
+
+      if (!timThay) {
+          alert("Mã học viên không tồn tại");
+      }
+
+      display();
+  }
+
+  // Delete
+  function del(){
+      let maKtr = prompt("Nhập mã học viên cần xóa");
+      let timThay =false;
+
+      for (let i = 0; i < arrayQuanLi.length; i++) {
+          if (maKtr === arrayQuanLi[i].maHocVien){
+              let comf = confirm("Ban co chac chan xoa hoc vien: "+ arrayQuanLi[i].maHocVien+" || Co ten: "+arrayQuanLi[i].ten);
+
+              if (comf){
+                  arrayQuanLi.splice(i,1);
+                  alert("Xóa thành công");
+                  display();
+              }
+
+              timThay = true;
+              break;
+          }
+      }
+      if (!timThay){
+          alert("Khong tim thay ma hoc vien");
+      }
+  }
+
+  // Hien thi
+  function display(){
+      let tableList = `<table border="2">
+  <tr>
+      <th style="width: 100px" >Ma hoc vien</th>
+      <th style="width: 200px" >Ten</th>
+      <th style="width: 50px">Lop</th>
+      <th style="width: 200px" >Email</th>
+      <th style="width: 200px" >Ngay sinh</th>
+  </tr>
+      `;
+      for (let i = 0; i < arrayQuanLi.length; i++) {
+          tableList += `
+          <tr>
+          <td>${arrayQuanLi[i].maHocVien}</td>
+          <td>${arrayQuanLi[i].ten}</td>
+          <td>${arrayQuanLi[i].lop}</td>
+          <td>${arrayQuanLi[i].email}</td>
+          <td>${arrayQuanLi[i].ngaySinh}</td>
+</tr>`;
+      }
+      tableList += `</table>`;
+      document.getElementById("display").innerHTML = tableList;
+  }
+</script>
+</body>
+</html>

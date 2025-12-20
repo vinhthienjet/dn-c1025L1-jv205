@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="app" onclick="appNew()" >Them hoc vien</button>
+<button id="sua" >Sua hoc vien</button>
+<button id="xoa" >Xoa hoc vien</button>
+
+<p id="hienThi" ></p>
+<script>
+    class HocVien{
+        maHocVien;
+        ten;
+        lop;
+        email;
+        ngaySinh;
+
+        constructor(maHocVien, ten, lop, email, ngaySinh) {
+            this.maHocVien = maHocVien;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.ngaySinh = ngaySinh;
+        }
+    }
+
+    let arrayHocVien = [];
+    display();
+
+    function display(){
+        let tableString = `
+            <table border="2" >
+    <tr>
+        <th style="width: 100px" >Ma hoc vien</th>
+        <th style="width: 200px" >Ten</th>
+        <th style="width: 50px">Lop</th>
+        <th style="width: 200px" >Email</th>
+        <th style="width: 200px" >Ngay sinh</th>
+    </tr>`;
+        for (let i = 0; i < arrayHocVien.length; i++) {
+            tableString += `
+            <tr>
+        <th>${arrayHocVien[i].maHocVien}</th>
+        <th>${arrayHocVien[i].ten}</th>
+        <th>${arrayHocVien[i].lop}</th>
+        <th>${arrayHocVien[i].email}</th>
+        <th>${arrayHocVien[i].ngaySinh}</th>
+    </tr> `
+        }
+        tableString += `</table>`;
+        document.getElementById("hienThi").innerHTML = tableString;
+    }
+
+    function appNew(){
+        let appMaSinhVien = prompt("Ma sinh vien");
+        if (appMaSinhVien < 10){
+            appMaSinhVien = "HV-000"+appMaSinhVien;
+        } else if (appMaSinhVien < 100){
+            appMaSinhVien = "HV-00"+appMaSinhVien;
+        } else if (appMaSinhVien < 1000){
+            appMaSinhVien = "HV-0"+appMaSinhVien;
+        } else {
+            appMaSinhVien = "HV-"+appMaSinhVien;
+        }
+
+
+        let appTen = prompt("Nhap ten");
+        do {
+            appTen = prompt("Nhập tên (tối đa 50 ký tự)");
+        }while (appTen.length >=50)
+
+
+        let appLop = prompt("Nhap lop");
+        let appEmail = prompt("Nhap email");
+
+
+        let appNgayThangNamSinh;
+        let ok = false;
+
+        do {
+            appNgayThangNamSinh = prompt("Nhập ngày sinh (dd/mm/yyyy)");
+            let a = appNgayThangNamSinh.split("/");
+            if (a.length === 3){
+                let dd = +a[0];
+                let mm = +a[1];
+                let yy = +a[2];
+                if (dd>=1 && dd<=31 && mm>=1 && mm<=12 && yy>=1900 && yy<=2025){
+                    ok = true;
+                }
+            }
+        }while (!ok);
+
+        let newHocVien = new HocVien(appMaSinhVien, appTen, appLop, appEmail, appNgayThangNamSinh);
+        arrayHocVien.push(newHocVien);
+        display();
+    }
+
+    function setNew(){
+
+    }
+
+    function delNew(){
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let n = +prompt("Nhap so phan tu muon truyen vao");
+    let array = [];
+    for (let i = 0; i < n; i++) {
+      let x = prompt("Nhap phan tu thu " + (i+1));
+      array.push(x);
+    }
+    let isIncreasing = true;
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] > array[i+1]){
+        isIncreasing = false;
+        break;
+      }
+    }
+    if (isIncreasing){
+      alert(array+ " true");
+    } else {
+      alert(array+" False")
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  doiXung();
+
+  function doiXung(){
+    let n = +prompt("Nhập số phần tử trong mảng");
+    let array = [];
+
+    // Nhap phan tu
+    for (let i = 0; i < n; i++) {
+      let x = +prompt("Phần tử thứ " + (i + 1));
+      array.push(x);
+    }
+
+    // Khai bao mang
+    let isDoiXung = true;
+
+    // Kiem tra doi xung
+    for (let i = 0; i < array.length / 2; i++) {
+      if (array[i] !== array[array.length - 1 - i]) {
+        isDoiXung = false;
+        break;
+      }
+    }
+
+    if (isDoiXung) {
+      alert("OK");
+    } else {
+      alert("NO");
+    }
+  }
+</script>
+
+</body>
+</html>

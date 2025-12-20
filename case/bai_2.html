@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert("Nhap vao 3 canh cua 1 tam giac");
+
+    let x = +prompt("Nhap canh x");
+    let y = +prompt("Nhap canh y");
+    let z = +prompt("Nhap canh z");
+    alert(checkTamGiac(x,y,z));
+    function checkTamGiac(x,y,z) {
+
+
+        // Không phải tam giác
+        if (x <= 0 || y <= 0 || z <= 0 || x + y <= z || x + z <= y || y + z <= x) {
+            return "Không phải là cạnh của 1 tam giác";
+        }
+
+        // Tam giác vuông
+        if (x*x + y*y === z*z ||
+            x*x + z*z === y*y ||
+            y*y + z*z === x*x) {
+            return "Là 3 cạnh của 1 tam giác vuông";
+        }
+
+        // Tam giác thường
+        return "Chỉ là 3 cạnh của một tam giác";
+    }
+</script>
+</body>
+</html>
