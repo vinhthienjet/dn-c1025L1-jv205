@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = [];
+  let n = +prompt("Nhap so phan tu trong mang");
+
+  for (let i = 0; i < n; i++) {
+    let x = prompt("Nhap phan tu thu "+(i+1));
+    arr.push(x);
+  }
+  let ketQuaSo = true;
+  let ketQuaKyTu = true;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (isNaN(arr[i]) ){
+      ketQuaSo = false;
+    } else {
+      ketQuaKyTu = false;
+    }
+  }
+
+  if (ketQuaSo){
+    alert("Chuoi toan so");
+  } else if (ketQuaKyTu){
+    alert("Chuoi toan ky tu")
+  } else {
+    alert("Chuoi co ca so va ky tu");
+  }
+
+  alert(arr);
+</script>
+</body>
+</html>

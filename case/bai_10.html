@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let string = prompt("Nhap chuoi can kiem tra");
+    let nguyenAm = [];
+
+    function checkString(str){
+        for (let i = 0; i < string.length; i++) {
+            let c = str[i];
+            if ((c === 'a' || c === 'e' || c === 'i' || c === 'o' || c === 'u')){
+                nguyenAm += str[i]+" ";
+            }
+        }
+    }
+
+    checkString(string);
+
+    alert(string+": "+nguyenAm);
+
+</script>
+</body>
+</html>

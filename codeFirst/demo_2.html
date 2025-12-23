@@ -1,10 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input id="id" placeholder="Nhap id cua san pham" > <br/><br/>
+<input id="name" placeholder="Nhap name cua san pham" > <br/><br/>
+<input id="price" placeholder="Nhap price cua san pham" > <br><br/>
+<button onclick="display()" >Xac nhan</button>
+<p id="result" ></p>
+<script>
+    class Product{
+        id;
+        name;
+        price;
+        constructor(id, name, price) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+        }
+    }
+    let product = [];
+    function display(){
+
+        let tableList = `
+        <table border="2" >
+    <tr>
+        <th>STT</th>
+        <th style="width: 25px" >ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Set</th>
+        <th>Delete</th>
+    </tr>
+        `;
+        for (let i = 0; i < product.length; i++) {
+            tableList += `
+            <tr>
+            <th>${i+1}</th>
+            <th>${product[i].id}</th>
+            <th>${product[i].name}</th>
+            <th>${product[i].price}</th>
+            <th><button onclick = "" >Set</button></th>
+            <th><button>Del</button></th>
+            </tr>
+            `;
+        }
+        tableList += `</table>`;
+        document.getElementById("result").innerHTML = tableList;
+    }
+
+    function appNew(){
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        let newProduct = new Product(id, name, price);
+        if (id !== "" && name !== "" && price !== ""){
+            product.push(newProduct);
+        } else {
+            alert("Ban can nhap day du thong tin");
+        }
+    }
+
+
+
+</script>
 </body>
 </html>

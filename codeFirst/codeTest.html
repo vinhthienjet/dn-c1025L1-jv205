@@ -1,10 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input id="id" placeholder="Nhập mã sản phẩm ">
+<input id="name" placeholder="Nhập tên sản phẩm ">
+<input id="price" placeholder="Nhập giá sản phẩm ">
+<button onclick="addNewProduct()">Thêm mới</button>
+<p id="display"></p>
+<script>
+    class Product {
+        id;
+        name;
+        price;
+
+        constructor(id, name, price) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+        }
+
+    }
+    let productList = [];
+    let product1 = new Product("SP-001", "sam sung", 100);
+    let product2 = new Product("SP-002", "nokia", 300);
+    let product3 = new Product("SP-003", "iphone", 500);
+    productList.push(product1, product2, product3);
+    display();
+
+    function addNewProduct() {
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        if (name !== "" && id !== "" && price !== "") {
+            let newProduct = new Product(id,name,price);
+            productList.push(newProduct);
+        } else {
+            alert("Cần phải nhập thông tin đầy đủ cho sản phẩm ")
+        }
+
+        document.getElementById("id").value = "";
+        document.getElementById("name").value = "";
+        document.getElementById("price").value = "";
+        display();
+    }
+
+    function display() {
+        let tableString = `<table border="1">
+                        <tr>
+                            <th>STT</th>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>price</th>
+                            <th>Delete</th>
+                        </tr>`;
+        for (let i = 0; i < productList.length; i++) {
+
+            // template literal
+            tableString += `<tr>
+                            <td>${i + 1}</td>
+                            <td>${productList[i].id}</td>
+                            <td>${productList[i].name}</td>
+                            <td>${productList[i].price}</td>
+                            <td><button onclick="deleteProduct(${i})">Delete</button></td>
+                        </tr>`
+        }
+        tableString += `</table>`;
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    function deleteProduct(index) {
+        let conf = confirm("Bạn có muốn xoá sản phẩm " + productList[index].name + " không?")
+        if (conf) {
+            productList.splice(index, 1);
+            display();
+        }
+    }
+
+</script>
 </body>
 </html>

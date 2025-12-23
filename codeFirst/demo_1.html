@@ -1,10 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <input id="id" placeholder="Nhap ma san pham"> <br/><br/>
+    <input id="name" placeholder="Nhap ten san pham"> <br/><br/>
+    <input id="price" placeholder="Nhap price san pham"> <br/><br/>
+    <button onclick="appNew()" >Them San Phan</button> <button id="reset" onclick="DeleteInformation()" >Xoa</button>
+    <p id="display"></p>
+<script>
+    class Product {
+        id;
+        name;
+        price;
+        constructor(id, name, price) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+        }
+    }
+    let productList = [];
+    display();
+
+    //Them product vao list
+    function appNew(){
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        if (id !== "" && name !== "" && price !== ""){
+            let appNewProduct = new Product(id,name,price);
+                productList.push(appNewProduct);
+        } else {
+            alert("Ban can nhap day du thong tin");
+        }
+        document.getElementById("id").value = "";
+        document.getElementById("name").value = "";
+        document.getElementById("price").value = "";
+        display();
+    }
+
+    //Hien thi vao list
+    function display(){
+        let tableList = ` <table border="2">
+    <tr>
+        <th>STT</th>
+        <th>ID</th>
+        <th>Name Product</th>
+        <th>Price</th>
+        <th>Set</th>
+        <th>Delete</th>
+    </tr>`;
+        for (let i = 0; i < productList.length; i++) {
+            tableList += `
+            <tr>
+                <td>${i+1}</td>
+                <td>${productList[i].id}</td>
+                <td>${productList[i].name}</td>
+                <td>${productList[i].price}</td>
+                <td><button onclick="setInformation(${i})" >Set</button></td>
+                <td><button onclick="delProduct(${i})" >Delete</button></td>
+            </tr>
+            `
+        }
+        tableList += `</table>`;
+        document.getElementById("display").innerHTML = tableList;
+    }
+
+    //Xoa thong tin dang nhap
+    function DeleteInformation(){
+        document.getElementById("id").value = "";
+        document.getElementById("name").value = "";
+        document.getElementById("price").value = "";
+    }
+
+    //Delete Product
+    function delProduct(index){
+        let xacNhan = confirm("Ban co muon xoa "+productList[index].name+" khong ?");
+        if (xacNhan){
+            productList.splice(index,1);
+            display();
+        }
+    }
+
+    //Sua information
+    function setInformation(index){
+        alert("sua thong tin san pham "+productList[index].name);
+        let idSet = prompt("ID");
+        let nameSet = prompt("Name");
+        let priceSet = prompt("Price");
+        document.getElementById(productList[index].id);
+        document.getElementById(productList[index].name);
+        document.getElementById(productList[index].price);
+        if (idSet !== "" && nameSet !== "" && priceSet !== ""){
+            productList[index].id = idSet;
+            productList[index].name = nameSet;
+            productList[index].price = priceSet;
+        }
+        display();
+    }
+</script>
 </body>
 </html>

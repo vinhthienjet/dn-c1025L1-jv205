@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  let arr = [];
+  let n;
+  do {
+      n = +prompt("Nhap so phan tu trong mang(luu y chi nhap so chan)");
+  } while (n % 2 !== 0);
+
+
+  for (let i = 0; i < n; i++) {
+    let x = +prompt("Nhap phan tu thu "+ (i+1));
+    arr.push(x);
+  }
+  let ketQua = true;
+  for (let i = 0; i < arr.length; i = i +2) {
+    if (arr[i] > arr[i+1]){
+      ketQua = false;
+    }
+  }
+
+  if (ketQua){
+    alert("yes");
+  } else {
+    alert("No");
+  }
+
+  alert(arr);
+</script>
+</body>
+</html>

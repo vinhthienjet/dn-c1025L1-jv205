@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra so nguyen to</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt("Nhap so phan tu trong mang");
+
+    for (let i = 0; i < n; i++) {
+        let x = +prompt("Nhap phan tu so " + (i + 1));
+        arr.push(x);
+    }
+
+    // Hàm kiểm tra số nguyên tố
+    function isPrime(num) {
+        if (num <2){
+            return false;
+        }
+        for (let i = 2; i < num; i++) {
+            if (num % i ===0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let ketQua = true;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (!isPrime(arr[i])) {
+            ketQua = false;
+            break;
+        }
+    }
+
+    alert("Mang: " + arr);
+    alert("Ket qua: " + ketQua);
+</script>
+</body>
+</html>

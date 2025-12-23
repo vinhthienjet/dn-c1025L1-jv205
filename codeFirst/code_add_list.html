@@ -14,10 +14,9 @@
 
     function addNewProduct(){
         let name = document.getElementById("name").value;
-        if (name!==""){roductList.push(name);
+        if (name!==""){productList.push(name);
         }else {
-            alert("Cần phải nhập tên sản phẩm ")
-            p
+            alert("Cần phải nhập tên sản phẩm ");
         }
 
         document.getElementById("name").value ="";
@@ -38,7 +37,7 @@
                             <td>${i+1}</td>
                             <td>${productList[i]}</td>
                             <td><button onclick="deleteProduct(${i})">Delete</button></td>
-                        </tr>`
+                        </tr>`;
         }
         tableString +=`</table>`;
         document.getElementById("display").innerHTML = tableString;
