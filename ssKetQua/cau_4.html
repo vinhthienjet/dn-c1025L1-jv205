@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau_4</title>
+</head>
+<body>
+<h2 style="text-align: center" >Quan li cong nhan</h2>
+<button onclick="themCongNhan()" >Them cong nhan</button>
+<button onclick="danhSachCongNhan()" >Danh sach cong nhan ban dau</button>
+<button onclick="sapXep()" >Danh sach cong nhan sap xep</button>
+<p id="hienThi" ></p>
+<script>
+    class CongNhan{
+        stt;
+        hoVaTen;
+        ngaySinh;
+        diaChi;
+        luong;
+        chucVu;
+
+        constructor(stt, hoVaTen, ngaySinh, diaChi, luong, chucVu) {
+            this.stt = stt;
+            this.hoVaTen = hoVaTen;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
+            this.luong = luong;
+            this.chucVu = chucVu;
+        }
+    }
+
+    let arrCongNhan = [];
+    hienThi(arrCongNhan);
+
+    function hienThi(arr){
+        let tableString = `
+        <table border="2" >
+        <tr>
+        <th>STT</th>
+        <th>Ho va ten</th>
+        <th>Ngay sinh</th>
+        <th>Dia chi</th>
+        <th>Luong</th>
+        <th>Chuc vu</th>
+        </tr>
+        `;
+
+        for (let i = 0; i < arr.length; i++) {
+            tableString += `
+            <tr>
+            <td>${i+1}</td>
+            <td>${arr[i].hoVaTen}</td>
+            <td>${arr[i].ngaySinh}</td>
+            <td>${arr[i].diaChi}</td>
+            <td>${arr[i].luong}</td>
+            <td>${arr[i].chucVu}</td>
+</tr>
+            `;
+        }
+        tableString += `</table>`;
+        document.getElementById("hienThi").innerHTML = tableString;
+    }
+
+    function themCongNhan(){
+        let ten = prompt("Nhap ten cong nhan");
+        let namSinh = prompt("Nhap ngay thang nam sinh");
+        let diaChi = prompt("Nhap dia chi");
+        let luong = prompt("Nhap luong");
+        let chucVu = prompt("Nhap chuc vu");
+
+        let cn = new CongNhan(" " ,ten, namSinh, diaChi, luong, chucVu);
+        arrCongNhan.push(cn);
+    }
+
+    function sapXep(){
+        let sapXep = [...arrCongNhan];
+        sapXep.sort((a,b)=> a.hoVaTen - b.hoVaTen);
+        hienThi(sapXep);
+    }
+
+    function danhSachCongNhan(){
+        hienThi(arrCongNhan);
+    }
+</script>
+</body>
+</html>

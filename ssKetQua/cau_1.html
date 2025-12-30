@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau 1</title>
+</head>
+<body>
+<script>
+
+  let arr = [];
+  let n;
+
+  do {
+    n = +prompt("Nhập số phần tử (1–50)");
+  } while (n <= 0 || n > 50);
+
+  for (let i = 0; i < n; i++) {
+    let x = +prompt("Nhập phần tử thứ " + (i + 1));
+    arr.push(x);
+  }
+
+  let sum = 0;
+  let dem = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 3 === 0){
+      sum += arr[i];
+      dem ++;
+    }
+  }
+
+  if (dem === 0){
+    alert("Khong co so nao chia het cho 3")
+  } else {
+    let ketQua = sum / dem ;
+    alert("Trung binh cong cac so chia het cho 3: "+ketQua);
+  }
+</script>
+</body>
+</html>
