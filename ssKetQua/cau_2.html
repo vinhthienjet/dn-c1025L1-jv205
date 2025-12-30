@@ -6,13 +6,15 @@
 </head>
 <body>
 <script>
-  let n;
-  kiemTra(n);
+    let n = +prompt("Nhập số nguyên dương n:");
+
+    kiemTra(n);
 
   function kiemTra(n){
-      do {
-          n = +prompt("Nhap n (So nguyen duong)");
-      }while (isNaN(n) || n <= 0) ;
+      if (isNaN(n) || n <= 0) {
+          alert("Vui lòng nhập số nguyên dương!");
+          return;
+      }
 
       let ketQua = true;
       let sum = 0;
